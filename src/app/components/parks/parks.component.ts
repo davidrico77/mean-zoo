@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
 	selector: 'parks',
 	templateUrl: './parks.component.html'
 })
 
-export class  ParksComponent  {
+export class  ParksComponent implements OnChanges  {
 	@Input() name: string;
 	@Input('meters_square') meters: number;
 	public vegetation: string;
@@ -18,6 +18,13 @@ export class  ParksComponent  {
 		this.meters=450;
 		this.vegetation='High';
 		this.open=false;
+	}
+
+	//Hook that is executed when any property of our component is modified 
+	ngOnChanges(changes: SimpleChanges){
+		//console.log(changes);
+		console.log(There are changes in the properties);
+
 	}
 
 	emitEvent(){

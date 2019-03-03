@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 //Components
 import { AppComponent } from './app.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { ParksComponent } from './components/parks/parks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopComponent
+    ShopComponent,
+    ParksComponent
   ],
   imports: [
     BrowserModule,

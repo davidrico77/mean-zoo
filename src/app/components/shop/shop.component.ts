@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class  ShopComponent  {
 	public titleShop;
 	public namePark: string;
+	public myPark;
 
 	constructor(){
 		this.titleShop = 'This is the shop';
@@ -16,5 +17,11 @@ export class  ShopComponent  {
 
 	showName(){
 		console.log(this.namePark);
+	}
+
+	showParkData(event){
+		console.log(event);
+		this.myPark = event;
+
 	}
 } 

@@ -1,3 +1,4 @@
+Father:
 <h1> {{titleShop}} </h1>
 		<ul>
 			<li>Pink T shirt</li>
@@ -16,8 +17,21 @@
 	Result: {{namePark}}
 </p>
 
+<div *ngIf="myPark">
+	<h4>Park Data from child</h4>
+	<ol>
+		<li>{{myPark.name}}</li>
+		<li>{{myPark.meters}}</li>
+		<li>{{myPark.vegetation}}</li>
+		<li>{{myPark.open}}</li>
+
+	</ol>
+
+</div>
 
 <p *ngIf="namePark">
 	Child:
-	<parks [name]="namePark" [meters_square]=88></parks>
+	<parks	[name]="namePark" 
+			[meters_square]=88 
+			(passMeTheData)="showParkData($event)"></parks>
 </p>

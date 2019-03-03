@@ -1,6 +1,23 @@
 <h1> {{titleShop}} </h1>
 		<ul>
-			<li>Pink</li>
-			<li>Red</li>
-			<li>Green</li>
+			<li>Pink T shirt</li>
+			<li>Red cap</li>
+			<li>Green trousers</li>
 		</ul>
+
+<hr/>
+
+<p>
+	Name park:
+	<input type="text" [(ngModel)] = "namePark" (keyup)="showName()"/>
+</p>
+
+<p>
+	Result: {{namePark}}
+</p>
+
+
+<p *ngIf="namePark">
+	Child:
+	<parks [name]="namePark" [meters_square]=88></parks>
+</p>
